@@ -94,6 +94,70 @@ Nous voulons calculer la probabilité de tirer une boule rouge sachant que nous 
 1. Simulez le tirage d'une Urne sans remise en créant une fonction draw_ball.
 1. Créez maintenant une fonction qui calcule la probabilité conditionnelle et comparez avec le résultat théorique.
 
+## Correction théorique 
+
+### Corrections
+
+Supposons que nous ayons 5 boules rouges et 5 boules vertes dans l'urne.
+
+- Le nombre total de boules, n, est 5 + 5 = 10.
+- La probabilité de tirer une boule verte, P(B), est le nombre de boules vertes divisé par le nombre total de boules, donc P(B) = 5/10 = 0.5.
+- Après avoir tiré une boule verte, il reste n - 1 = 9 boules dans l'urne, dont 5 sont rouges.
+- La probabilité de tirer une boule rouge sachant que nous avons tiré une boule verte, P(A|B), est le nombre de boules rouges restantes divisé par le nombre total de boules restantes, donc P(A|B) = 5/9.
+
+Donc, la probabilité conditionnelle P(A|B) est :
+
+P(A|B) = 5/9
+
+*Autre approche* 
+
+Formule  P(A|B) = P(A ∩ B) / P(B)
+
+Probabilité de tirer une boule rouge et ensuite une boule verte (P(A ∩ B)) :
+
+D'abord, tirons une boule verte. La probabilité de cela est 5/10.
+Après avoir tiré une boule verte, il reste 9 boules dans l'urne, dont 5 sont rouges.
+La probabilité de tirer une boule rouge après avoir tiré une boule verte est donc 5/9.
+La probabilité conjointe de ces deux événements (tirer une verte puis une rouge) est donc (5/10) * (5/9) = 25/90 = 5/18.
+
+Probabilité de tirer une boule rouge sachant qu'une boule verte a été tirée (P(A|B)) :
+
+La probabilité conditionnelle est donnée par P(A|B) = P(A ∩ B) / P(B).
+Nous avons déjà calculé P(A ∩ B) = 5/18 et P(B) = 0.5.
+Donc, P(A|B) = (5/18) / 0.5 = (5/18) * (2/1) = 5/9.
+P(A|B) = P(A ∩ B) / P(B) = (5/10) * (5/9) / (5/10) = (5/9)
+
+## Correction simulation 
+
+```python
+import random
+
+# tirage de l'urne
+def draw_ball(urn):
+    return random.choice(urn)
+
+# Les conditions de l'expérience 
+num_trials = 1_000_000
+num_red_green_given_green = 0
+num_green_drawn = 0
+num_green = 5
+num_red = 5
+
+# On simule tirer une boule rouge sachant que l'on a tiré une boule verte sans remise
+for _ in range(num_trials):
+    urn = ['red'] * num_red + ['green'] * num_green
+    first_draw = draw_ball(urn)
+    if first_draw == 'green':
+        num_green_drawn += 1
+        # Retirer une boule verte de l'urne
+        urn.remove('green')
+        second_draw = draw_ball(urn)
+        if second_draw == 'red':
+            num_red_green_given_green += 1
+        # Remettre une boule verte dans l'urne pour les tirages suivants
+        urn.append('green')
+```
+
 ## (🍄 🍄) 02 Exercice boules rouges et vertes tirage avec remise
 
 Supposons que nous avons une urne contenant :
