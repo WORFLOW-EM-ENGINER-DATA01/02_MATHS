@@ -1,51 +1,45 @@
-# Loi Normale 
+#  Temps de service dans un Restaurant
 
-```python
-import random
-import matplotlib.pyplot as plt
-import numpy as np
+## Contexte 
 
-# Fonction pour simuler un lancé de pièce (0 pour Pile, 1 pour Face)
-def toss_coin():
-    return random.randint(0, 1)
+⏲️ Un restaurant souhaite estimer le temps moyen que ses clients passent à la caisse pour payer. 
+Les temps de service individuels peuvent varier en fonction de nombreux facteurs (comme le nombre d'articles achetés, le mode de paiement, etc.) et ne suivent pas nécessairement une distribution normale. 
 
-# Fonction pour simuler 5 lancés de pièce et compter le nombre de "Pile"
-def simulate_5_coin_tosses():
-    num_piles = 0
-    for _ in range(5):
-        if toss_coin() == 0:
-            num_piles += 1
-    return num_piles
+Le manager souhaite utiliser ces temps pour prévoir le personnel nécessaire pour éviter les longues files d'attente.
 
-# Simuler et collecter les résultats des 10 000 simulations
-total_simulations = 10000
-results = [simulate_5_coin_tosses() for _ in range(total_simulations)]
+⚠️ Temps de service individuels : Ces temps peuvent être très variables et peuvent ne pas suivre une distribution normale.
 
-# Calculer la fréquence de chaque résultat
-num_piles_counts = [results.count(i) / total_simulations for i in range(6)]
+**Approche TCL :**
 
-# Tracer l'histogramme empirique
-plt.bar(range(6), num_piles_counts, color='skyblue', edgecolor='black', alpha=0.7, label='Empirique')
+Vous simulerez cette problématique en Python afin de répondre aux questions suivantes.
 
-# Calculer la moyenne et l'écart type théoriques pour la distribution binomiale
-n = 5
-p = 0.5
-mean = n * p
-std_dev = np.sqrt(n * p * (1 - p))
+1. **Collecter les données :**
+   Le restaurant collecte les temps de service pour 1000 clients.
 
-# Générer les valeurs pour la distribution normale
-x = np.arange(0, 6, 0.1)
-y = [1 / (std_dev * np.sqrt(2 * np.pi)) * np.exp(-(i - mean)**2 / (2 * std_dev**2)) for i in x]
+1. **Calculer les moyennes d'échantillons :**
+   Diviser ces 1000 temps de service en groupes de 50 (par exemple), puis calculer la moyenne des temps de service pour chaque groupe. Cela donne 20 moyennes d'échantillons.
 
-# Tracer la courbe de la distribution normale
-plt.plot(x, y, color='red', label='Normale')
+1. **Distribution des moyennes :**
+   Selon le TCL, la distribution de ces moyennes d'échantillons sera approximativement normale, même si la distribution des temps de service individuels ne l'est pas.
 
-# Configurer le graphique
-plt.xlabel('Nombre de "Pile"')
-plt.ylabel('Fréquence / Densité')
-plt.title('Distribution du Nombre de "Pile" sur 5 Lancés de Pièce')
-plt.xticks(range(6))
-plt.legend()
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.show()
-```
+## Annexes
+
+Voilà ce que vous pourriez faire avec la loi normale.
+   
+🍅 Supposons que la moyenne des moyennes d'échantillons (μₙ) est de 150 secondes. 
+
+Si un caissier travaille pendant une période de 3600 secondes (1 heure), vous pouvez estimer qu'un caissier peut servir environ 3600 / 150 ≈ 24 clients par heure.
+
+Si vous attendez 240 clients en une heure, vous aurez besoin d'environ 240 / 24 = 10 caissiers.
+
+- En résumé
+
+- Moyenne des moyennes d'échantillons : C'est le temps moyen de service estimé.
+  
+- Écart type des moyennes d'échantillons : Mesure de la dispersion des temps de service moyens.
+
+- Nombre de clients qu'un caissier peut servir par heure : Utilisé pour estimer le nombre de caissiers nécessaires.
+  
+- Nombre de caissiers nécessaires : Indique combien de caissiers sont requis pour gérer efficacement la charge de travail prévue.
+
+Bon développement.
