@@ -167,6 +167,36 @@ Supposons que nous avons une urne contenant :
 
 Calculez la probabilité de tirer une boule rouge sachant que nous avons tiré une boule verte, en supposant que chaque boule est remise dans l'urne après chaque tirage (tirage avec remise) 
 
+## Correction
+
+P(A|B) = P(A ∩ B) / P(B)
+
+Mais si A et B sont des événements indépendants, alors P(A ∩ B) = P(A) . P(B)
+
+P(A|B) = P(A ∩ B) / P(B) = P(A) . P(B) / P(B) = P(A)
+
+P(A ∩ B) = (3/5) * (2/5) 
+
+P(A|B) = P(A) = 3/5
+
+```python
+import random
+
+# tirage de l'urne
+def draw_ball(urn):
+    return random.choice(urn)
+    
+num_trials = 1_000
+num_red_drawn = 0
+num_green = 2
+num_red = 3
+urn = ['red'] * num_red + ['green'] * num_green
+for _ in range(num_trials):
+    if draw_ball(urn) == 'red': num_red_drawn += 1
+
+print(num_red_drawn/num_trials)
+```
+
 ### (🍄) 03 Exercices et Applications
 
 Faites ces exercices en Python, simulez les résultats afin de vérifier la théorie
