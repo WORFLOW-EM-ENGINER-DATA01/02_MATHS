@@ -1,5 +1,23 @@
 #  Introduction aux Probabilités
 
+## Avant de commencer
+
+Pour faire les exercices créez un dossier jupyterData puis exécutez la commande suivante 
+
+```bash
+docker run -it --rm -p 10000:8888 -v "${PWD}":/home/jovyan/work quay.io/jupyter/datascience-notebook:2024-04-29
+```
+
+Pour vous connectez à jupyter allez dans Docker Desktop et dans le terminal du conteneur tapez la ligne de commande suivante et récupérez le token, puis définissez un mot de passe.
+
+```bash
+jupyter server list
+```
+
+⚠️ Notez bien que vos scripts sont dans le dossier work dans notebook.
+
+## Les probabilités
+
 Les probabilités sont une branche des mathématiques qui nous permettent de quantifier et d'analyser l'incertitude. Elles sont utilisées dans de nombreux domaines tels que la science, l'économie, la finance et bien d'autres. Comprendre les probabilités est essentiel pour prendre des décisions éclairées dans un monde où l'incertitude est omniprésente.
 
 ## Concepts Fondamentaux

@@ -14,10 +14,10 @@ Le manager souhaite utiliser ces temps pour prévoir le personnel nécessaire po
 Vous simulerez cette problématique en Python afin de répondre aux questions suivantes.
 
 1. **Collecter les données :**
-   Le restaurant collecte les temps de service pour 1000 clients.
+   Le restaurant collecte les temps de service pour 10000 clients.
 
 1. **Calculer les moyennes d'échantillons :**
-   Diviser ces 1000 temps de service en groupes de 50 (par exemple), puis calculer la moyenne des temps de service pour chaque groupe. Cela donne 20 moyennes d'échantillons.
+   Diviser ces 10000 temps de service en groupes de 1000 (par exemple), puis calculer la moyenne des temps de service pour chaque groupe. Cela donne 20 moyennes d'échantillons.
 
 1. **Distribution des moyennes :**
    Selon le TCL, la distribution de ces moyennes d'échantillons sera approximativement normale, même si la distribution des temps de service individuels ne l'est pas.
