@@ -16,6 +16,6 @@ Puis lancez le client et connectez vous avec la syntaxe suivante :
 
 <img src="compass.png" alt="drawing" width="500"/>
 
-- Faire des requêtes
+- Faire des requêtes, appuyez sur le bouton option pour accéder aux paramètres de la requête.
 
 <img src="compass_db.png" alt="drawing" width="800"/>
