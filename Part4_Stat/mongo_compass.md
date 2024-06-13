@@ -18,4 +18,4 @@ Puis lancez le client et connectez vous avec la syntaxe suivante :
 
 - Faire des requêtes
 
-<img src="compass_db.png" alt="drawing" width="500"/>
+<img src="compass_db.png" alt="drawing" width="800"/>
