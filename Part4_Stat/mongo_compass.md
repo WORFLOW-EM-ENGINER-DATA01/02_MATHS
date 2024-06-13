@@ -14,8 +14,8 @@ Puis lancez le client et connectez vous avec la syntaxe suivante :
 
 - Se connecter
 
-![compass](./compass.png)
+<img src="compass.png" alt="drawing" width="500"/>
 
 - Faire des requêtes
 
-![compass](./compass_db.png)
+<img src="compass_db.png" alt="drawing" width="500"/>
