@@ -2,7 +2,7 @@
 
 Vous avez 3h pour effectuer ce TP.
 
-Les données se trouve ici : [!data](./sales.js)
+Les données se trouve ici : [data](./sales.js)
 
 Vous pouvez utiliser utiliser également MongoDB Compass
 
