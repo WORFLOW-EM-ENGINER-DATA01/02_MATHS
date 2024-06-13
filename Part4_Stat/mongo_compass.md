@@ -4,7 +4,7 @@ L'interface est intuitive
 
 - Vous devez installer le client MongoDB Compass
 
-[!mongoDB Compass](https://www.mongodb.com/products/tools/compass)
+[mongoDB Compass](https://www.mongodb.com/products/tools/compass)
 
 Puis lancez le client et connectez vous avec la syntaxe suivante : 
 
@@ -14,8 +14,8 @@ Puis lancez le client et connectez vous avec la syntaxe suivante :
 
 - Se connecter
 
-[!compass](./compass.png)
+![compass](./compass.png)
 
 - Faire des requêtes
 
-[!compass](./compass_db.png)
+![compass](./compass_db.png)
