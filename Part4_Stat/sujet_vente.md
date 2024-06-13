@@ -4,6 +4,8 @@ Vous avez 3h pour effectuer ce TP.
 
 Les données se trouve ici : [!data](./sales.js)
 
+Vous pouvez utiliser utiliser également MongoDB Compass
+
 ## Contexte
 
 Vous êtes chargé d'analyser les ventes de produits pour une chaîne de magasins utilisant une base de données MongoDB. 
