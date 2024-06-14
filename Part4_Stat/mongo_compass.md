@@ -18,7 +18,7 @@ Puis lancez le client et connectez vous avec la syntaxe suivante :
 
 - Sélectionner une base de données dans la sidebar, puis une collection dans la base de données
   
-<img src="./bd_compass.png" alt="drawing" width="500"/>
+<img src="./bd_compass.png" alt="drawing" width="200"/>
 
 
 - Faire des requêtes, appuyez sur le bouton option pour accéder aux paramètres de la requête.
