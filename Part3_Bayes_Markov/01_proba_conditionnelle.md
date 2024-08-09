@@ -10,7 +10,7 @@ La probabilité conditionnelle est un concept fondamental en probabilité qui pe
 $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 - $$( P(A \cap B) )$$ 
 *La probabilité que  A  et  B  se produisent simultanément.*
-- $$ P(B) $$ 
+- $$P(B)$$ 
 La probabilité que  B  se produise 
 
 **Interprétation :** La formule dit que pour calculer la probabilité de \( A \) sous la condition que \( B \) s'est produit, on regarde la proportion de cas où \( A \) et \( B \) se produisent ensemble par rapport à tous les cas où \( B \) se produit.
@@ -35,27 +35,19 @@ La probabilité que  B  se produise
    - **Événement \( B \) :** Les nombres pairs sur un dé à six faces sont {2, 4, 6}. Il y a donc 3 résultats pairs sur les 6 possibles.
 
      La probabilité d'obtenir un nombre pair est :
-    $$
-     P(B) = \frac{\text{Nombre de résultats pairs}}{\text{Nombre total de résultats}} = \frac{3}{6} = \frac{1}{2}
-    $$
+    $$P(B) = \frac{\text{Nombre de résultats pairs}}{\text{Nombre total de résultats}} = \frac{3}{6} = \frac{1}{2}$$
 
    - **Événement \( A \cap B \) :** Le seul résultat qui est à la fois un 4 et un nombre pair est 4.
 
      La probabilité d'obtenir un 4 parmi les résultats pairs est :
-    $$
-     P(A \cap B) = \frac{1}{6}
-    $$
+    $$P(A \cap B) = \frac{1}{6}$$
 
    - **Probabilité de \( A \) sachant \( B \) :**
 
      La probabilité d'obtenir un 4 sachant que le résultat est un nombre pair se calcule comme suit :
-    $$
-     P(A \mid B) = \frac{P(A \cap B)}{P(B)}
-    $$
+    $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
      Ici, \( P(A \cap B) \) est \( \frac{1}{6} \), et \( P(B) \) est \( \frac{1}{2} \). Donc :
-    $$
-     P(A \mid B) = \frac{\frac{1}{6}}{\frac{1}{2}} = \frac{1}{6} \times \frac{2}{1} = \frac{1}{3}
-    $$
+    $$P(A \mid B) = \frac{\frac{1}{6}}{\frac{1}{2}} = \frac{1}{6} \times \frac{2}{1} = \frac{1}{3}$$
 
 ### Réponse
 
@@ -79,17 +71,17 @@ Supposons qu'on ait un jeu de cartes standard de 52 cartes. On veut trouver la p
 
 - **Étape 2 :** Calculer les probabilités :
   - Il y a 4 rois dans le jeu, donc 
-  $$  P(A) = \frac{4}{52} $$.
+  $$P(A) = \frac{4}{52}$$.
   - Il y a 12 figures (4 rois, 4 dames, 4 valets), donc
-  $$ P(B) = \frac{12}{52} $$.
+  $$P(B) = \frac{12}{52}$$.
   - \( P(A \cap B) \) est la probabilité de tirer une carte qui est à la fois un roi et une figure. Comme les rois sont inclus dans les figures, 
-  $$ P(A \cap B) = P(A) = \frac{4}{52} $$
+  $$P(A \cap B) = P(A) = \frac{4}{52}$$
 
 - **Étape 3 :** Appliquer la formule :
-  $$ P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{4}{52}}{\frac{12}{52}} = \frac{4}{12} = \frac{1}{3} $$
+  $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{4}{52}}{\frac{12}{52}} = \frac{4}{12} = \frac{1}{3}$$
 
 Cela signifie que si on sait que la carte tirée est une figure, la probabilité qu'elle soit un roi est :
-$$ \frac{1}{3} $$
+$$\frac{1}{3}$$
 
 ## 4. Utilisations Pratiques
 
