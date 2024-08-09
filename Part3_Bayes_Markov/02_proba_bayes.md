@@ -7,19 +7,17 @@ Le théorème de Bayes est un des concepts fondamentaux en probabilité, particu
 Le théorème de Bayes permet de calculer la probabilité d'un événement à partir d'informations préalables, souvent exprimée en termes de probabilités conditionnelles.
 
 **Formule du Théorème de Bayes :**
-$$
-P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-$$
+$$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
 ( ** voir la démonstration ci-après )
 
-$$ P(A|B) $$ 
+$$P(A|B)$$ 
 - Probabilité de l'événement \( A \) sachant que \( B \) s'est produit.
-$$ P(B|A) $$ 
+$$P(B|A)$$ 
 - Probabilité de l'événement \( B \) sachant que \( A \) s'est produit.
-$$ P(A) $$ 
+$$P(A)$$ 
 - Probabilité a priori de \( A \) (probabilité de base avant toute observation).
-$$ P(B) $$ 
+$$P(B)$$ 
 - Probabilité de \( B \) (probabilité totale de l'événement \( B \)).
 
 ## 2. Interprétation du Théorème de Bayes
@@ -35,9 +33,7 @@ Imaginons que vous faites un test médical pour une maladie rare. Le test est po
 Avant d'utiliser le théorème de Bayes, il est souvent nécessaire de calculer \( P(B) \), la probabilité totale de l'événement \( B \). Cette probabilité peut être obtenue en considérant toutes les façons dont \( B \) peut se produire.
 
 **Formule pour la probabilité totale :**
-$$
-P(B) = \sum_{i} P(B|A_i) \cdot P(A_i)
-$$
+$$P(B) = \sum_{i} P(B|A_i) \cdot P(A_i)$$
 où \( A_i \) sont des événements qui forment une partition de l'espace des possibles (c'est-à-dire que l'un d'entre eux doit se produire).
 
 ## 4. Exemple Concret
@@ -53,26 +49,18 @@ Vous venez de recevoir un résultat positif au test. Quelle est la probabilité 
 - \( B \) : Le test est positif.
 
 **Étape 2 : Appliquer le théorème de Bayes**
-$$
-P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-$$
+$$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 Avec :
-$$ P(B|A) = 0,9 $$
-$$ P(A) = 0,01 $$
-$$ P(B) $$ 
+$$P(B|A) = 0,9$$
+$$P(A) = 0,01$$
+$$P(B)$$ 
 peut être calculé comme :
-$$
-P(B) = P(B|A) \cdot P(A) + P(B|\text{Pas de maladie}) \cdot P(\text{Pas de maladie})
-$$
+$$P(B) = P(B|A) \cdot P(A) + P(B|\text{Pas de maladie}) \cdot P(\text{Pas de maladie})$$
 C'est-à-dire :
-$$
-P(B) = (0,9 \times 0,01) + (0,05 \times 0,99) = 0,009 + 0,0495 = 0,0585
-$$
+$$P(B) = (0,9 \times 0,01) + (0,05 \times 0,99) = 0,009 + 0,0495 = 0,0585$$
 
 **Étape 3 : Calculer la probabilité que vous ayez la maladie**
-$$
-P(A|B) = \frac{0,9 \times 0,01}{0,0585} \approx 0,1538
-$$
+$$P(A|B) = \frac{0,9 \times 0,01}{0,0585} \approx 0,1538$$
 
 Donc, même avec un test positif, la probabilité que vous ayez réellement la maladie est d'environ 15,38 %. Cela montre l'importance de la rareté de la maladie dans l'interprétation des résultats du test.
 
@@ -98,17 +86,13 @@ Le théorème de Bayes est un outil puissant pour raisonner en probabilités con
 
 ## Démonstration du théorème de Bayes
 
-$$
-P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}
-$$
+$$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
 1. **Définition de la probabilité conditionnelle :**
 
    Par définition, la probabilité de \( A \) conditionnellement à \( B \) est donnée par :
 
-   $$
-   P(A \mid B) = \frac{P(A \cap B)}{P(B)}
-   $$
+   $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
    où \( P(A \cap B) \) est la probabilité de l'intersection de \( A \) et \( B \) (c'est-à-dire que les deux événements \( A \) et \( B \) se produisent).
 
@@ -116,16 +100,12 @@ $$
 
    De la même manière, on peut écrire la probabilité de l'intersection \( A \cap B \) en termes de la probabilité conditionnelle de \( B \) sachant \( A \) :
 
-   $$
-   P(A \cap B) = P(B \mid A) \cdot P(A)
-   $$
+   $$P(A \cap B) = P(B \mid A) \cdot P(A)$$
 
 3. **Substitution dans la formule de la probabilité conditionnelle :**
 
    En remplaçant \( P(A \cap B) \) dans l'expression de \( P(A \mid B) \) par \( P(B \mid A) \cdot P(A) \), on obtient :
 
-   $$
-   P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}
-   $$
+   $$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
    C'est exactement l'expression du théorème de Bayes.
