@@ -46,7 +46,7 @@ La probabilité que  B  se produise
 
      La probabilité d'obtenir un 4 sachant que le résultat est un nombre pair se calcule comme suit :
     $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
-     Ici, \( P(A \cap B) \) est \( \frac{1}{6} \), et \( P(B) \) est \( \frac{1}{2} \). Donc :
+     Ici, $$P(A \cap B) \) est \( \frac{1}{6}$$, et \( P(B) \) est \( \frac{1}{2} \). Donc :
     $$P(A \mid B) = \frac{\frac{1}{6}}{\frac{1}{2}} = \frac{1}{6} \times \frac{2}{1} = \frac{1}{3}$$
 
 ### Réponse
