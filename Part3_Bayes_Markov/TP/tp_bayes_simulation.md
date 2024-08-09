@@ -6,9 +6,9 @@
 
 **Rappels théoriques :**
 1. **Théorème de Bayes** :
-$$ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $$
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 2. **Probabilité totale** : 
-$$ P(B) = \sum_{i} P(B|A_i) \cdot P(A_i) $$
+   $$P(B) = \sum_{i} P(B|A_i) \cdot P(A_i)$$
 
 **Exemples d'application** :
 - Diagnostic médical.
@@ -65,21 +65,6 @@ print(data.head())
 2. Combien de tests positifs ont été obtenus ?
 3. Calculez la probabilité conditionnelle que quelqu'un soit malade sachant que son test est positif.
 
-**Réponse :**
-
-```python
-# Nombre total de tests positifs
-total_test_positif = data['Test_Positif'].sum()
-
-# Nombre de personnes malades parmi les tests positifs
-malade_et_positif = data[(data['Maladie'] == 1) & (data['Test_Positif'] == 1)].shape[0]
-
-# Probabilité conditionnelle
-P_M_given_P = malade_et_positif / total_test_positif
-
-print(f"La probabilité d'avoir la maladie sachant que le test est positif est : {P_M_given_P:.4f}")
-```
-
 # Partie 3 : Manipulation de Données avec Pandas 
 
 ## Objectif :
@@ -91,28 +76,12 @@ Explorer et analyser les données simulées en utilisant des techniques plus ava
 **Exercice :**
 - Calculez et affichez la proportion de tests positifs et négatifs dans votre simulation.
 
-```python
-# Distribution des tests positifs et négatifs
-distribution_tests = data['Test_Positif'].value_counts(normalize=True)
-print(distribution_tests)
-```
-
 **Étape 2 : Analyse des Sous-Groupes**
 - Séparez les données en deux sous-groupes : ceux qui sont malades et ceux qui ne le sont pas.
 - Calculez la proportion de tests positifs dans chacun de ces sous-groupes.
 
 **Exercice :**
 - Affichez la proportion de tests positifs pour les individus malades et non malades.
-
-```python
-# Proportion de tests positifs pour les malades
-positif_malades = data[data['Maladie'] == 1]['Test_Positif'].mean()
-print(f"Proportion de tests positifs chez les malades : {positif_malades:.4f}")
-
-# Proportion de tests positifs pour les non malades
-positif_non_malades = data[data['Maladie'] == 0]['Test_Positif'].mean()
-print(f"Proportion de tests positifs chez les non malades : {positif_non_malades:.4f}")
-```
 
 # Partie 4 : Discussion et Extension (20 min)
 
@@ -134,44 +103,3 @@ Interpréter les résultats obtenus et discuter de leur signification dans un co
 p_maladie = 0.1  # 10 % de la population
 # Répétez les étapes de simulation et d'analyse avec cette nouvelle probabilité.
 ```
-
---- Partie 2
-
-## Simulation 
-
-Créons un DataFrame avec des colonnes indiquant si une personne est malade et si son test est positif.
-
-```python
-import pandas as pd
-import numpy as np
-
-# Fixer la seed pour la reproductibilité
-np.random.seed(42)
-
-# Simuler 1000 individus
-n = 1000
-
-# Probabilité d'avoir la maladie
-p_maladie = 0.01
-maladie = np.random.choice([1, 0], size=n, p=[p_maladie, 1 - p_maladie])
-
-# Générer les résultats de test
-# Si malade: 90% de probabilité d'avoir un test positif
-# Si non malade: 5% de probabilité d'avoir un test positif (faux positif)
-test_positif = np.where(maladie == 1,
-                        np.random.choice([1, 0], size=n, p=[0.9, 0.1]),
-                        np.random.choice([1, 0], size=n, p=[0.05, 0.95]))
-
-# Créer le DataFrame
-data = pd.DataFrame({
-    'Maladie': maladie,
-    'Test_Positif': test_positif
-})
-
-# Afficher les premières lignes du DataFrame
-print(data.head())
-```
-
-1. Calculer les Probabilités 
-
-$$ P(Maladie | Test\ Positif) $$.
