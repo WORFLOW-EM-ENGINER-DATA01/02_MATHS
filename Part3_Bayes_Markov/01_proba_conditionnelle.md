@@ -74,7 +74,7 @@ Supposons qu'on ait un jeu de cartes standard de 52 cartes. On veut trouver la p
   $$P(A) = \frac{4}{52}$$.
   - Il y a 12 figures (4 rois, 4 dames, 4 valets), donc
   $$P(B) = \frac{12}{52}$$.
-  - \( P(A \cap B) \) est la probabilité de tirer une carte qui est à la fois un roi et une figure. Comme les rois sont inclus dans les figures, 
+$$P(A \cap B)$$ est la probabilité de tirer une carte qui est à la fois un roi et une figure. Comme les rois sont inclus dans les figures, 
   $$P(A \cap B) = P(A) = \frac{4}{52}$$
 
 - **Étape 3 :** Appliquer la formule :
