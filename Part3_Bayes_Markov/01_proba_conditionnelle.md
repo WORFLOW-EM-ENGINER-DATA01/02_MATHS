@@ -7,7 +7,7 @@ La probabilité conditionnelle est un concept fondamental en probabilité qui pe
 **Définition :** La probabilité conditionnelle de l'événement \( A \), sachant que l'événement \( B \) s'est produit, est notée \( P(A|B) \). Cela se lit "la probabilité de \( A \) sachant \( B \)".
 
 **Formule :**
-$$ P(A|B) = \frac{P(A \cap B)}{P(B)} $$
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 - $$( P(A \cap B) )$$ 
 *La probabilité que  A  et  B  se produisent simultanément.*
 - $$ P(B) $$ 
